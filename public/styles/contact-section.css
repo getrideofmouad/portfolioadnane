@@ -1,0 +1,71 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+}
+
+#contact .container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 32px;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact-wrapper__text {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 24px;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.cta-btn--resume {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 14px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+  letter-spacing: 0.5px;
+}
+
+.cta-btn--resume:hover,
+.cta-btn--resume:focus {
+  background-color: #a03a23;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  #contact .container {
+    padding: 16px 6px;
+  }
+  .section-title {
+    font-size: 1.3rem;
+  }
+}

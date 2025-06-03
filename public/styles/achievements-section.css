@@ -1,0 +1,168 @@
+/* Layout Section css */
+section {
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  color: var(--text-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Specific styles for the achievements section */
+.achievements .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.achievement-item {
+  perspective: 1000px;
+  flex: 1 1 calc(50% - 40px);
+  max-width: 450px;
+  margin: 10px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.card-back {
+  background: var(--primary-color);
+  color: var(--text-color);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.achievement-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.achievement-info {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.achievement-info h3 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.additional-info h4 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.additional-info p {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.additional-info a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+/* Adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+  .achievements .gallery {
+    flex-direction: column;
+  }
+
+  .achievement-item {
+    width: 70%;
+    margin: 75px auto;
+  }
+
+  .achievement-item:first-child {
+    margin-top: 0;
+  }
+
+  .achievement-item:last-child {
+    margin-top: 100px;
+    margin-bottom: 175px;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card-front,
+  .card-back {
+    height: auto;
+    padding: 20px;
+  }
+
+  .achievement-info h3,
+  .additional-info h4 {
+    font-size: 1em;
+  }
+}
+
+/* Adjustments for screens smaller than 480px */
+@media (max-width: 480px) {
+  .achievement-item {
+    margin: 65px auto;
+  }
+  .achievement-item:last-child {
+    margin-top: 85px;
+    margin-bottom: 160px;
+  }
+
+  .card-front,
+  .card-back {
+    padding: 15px;
+  }
+
+  .achievement-info h3,
+  .additional-info h4 {
+    font-size: 0.9em;
+  }
+}

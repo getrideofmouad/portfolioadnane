@@ -1,0 +1,145 @@
+.experience {
+  padding: 50px 20px;
+  background-color: #222;
+  color: #ffffff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section .experience-item {
+  /* TODO: make it appear 3 cards on a row */
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #333;
+  padding: 20px;
+}
+
+.experience-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.experience-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.experience-logo img {
+  width: 80px;
+  height: auto;
+}
+
+.experience-info h3 {
+  font-size: 1.5em;
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+.experience-info p {
+  font-size: 1.1em;
+  margin: 5px 0;
+  color: #cccccc;
+}
+
+.experience-links {
+  margin-top: 15px;
+}
+
+.experience-links a {
+  display: block;
+  color: #ff5733;
+  margin-bottom: 5px;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.experience-links a:hover {
+  color: #ffffff;
+}
+
+.experience-links i {
+  color: #cacaca;
+}
+
+/* .experience-links i.fa-google-drive{
+    color: #4285F4;
+}
+
+.experience-links i.fa-facebook{
+    color: #1877F2;
+} */
+
+.show-more-btn {
+  margin-top: 10px;
+  background-color: #ff5733;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #ff3300;
+}
+
+.hidden-content {
+  display: none;
+  margin-top: 15px;
+}
+
+.hidden-content img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.hidden-content video {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+a.no-wrap {
+  display: inline-block;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+/* Media Query for medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
+  section .experience-item {
+    width: calc(50% - 20px); /* 2 items per row */
+  }
+}
+
+/* Media Query for small screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  section .experience-item {
+    width: calc(100% - 20px); /* 1 item per row */
+  }
+}
+
+/* Adjustments for very small screens (e.g., narrow mobile devices) */
+@media (max-width: 480px) {
+  .experience-info h3 {
+    font-size: 1.3em; /* Slightly smaller font size */
+  }
+
+  .experience-info p {
+    font-size: 1em; /* Slightly smaller font size */
+  }
+
+  .experience-logo img {
+    width: 70px; /* Smaller logo size */
+  }
+}
